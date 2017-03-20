@@ -19,18 +19,41 @@ public class MainController {
         this.mainView = view;
     }
 
+    /**
+     * Устанавливает время для красного цвета
+     *
+     * @param number Номер светофора
+     * @param time   Время
+     */
     public void setRedTime(int number, int time) {
         service.getTrafficLight(number).setRedTime(time);
     }
 
+    /**
+     * Устанавливает время для желтого цвета
+     *
+     * @param number Номер светофора
+     * @param time   Время
+     */
     public void setYellowTime(int number, int time) {
         service.getTrafficLight(number).setYellowTime(time);
     }
 
+    /**
+     * Устанавливает время для зеленого цвета
+     *
+     * @param number Номер светофора
+     * @param time   Время
+     */
     public void setGreenTime(int number, int time) {
         service.getTrafficLight(number).setGreenTime(time);
     }
 
+    /**
+     * Включает выбранный светофор
+     *
+     * @param number    Номер светофора
+     */
     public void turnOnTrafficLight(int number) {
         TrafficLight trafficLight = service.getTrafficLight(number);
         try {

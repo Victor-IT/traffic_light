@@ -12,15 +12,16 @@ import com.vitkulov.traffic_light.ui.view.MainViewImpl;
 public class RunApp {
     public static void main(String[] args) {
 
-        // initial data
+        // Начальные данные
         TrafficLight trafficLight = new TrafficLight(1);
+
         TrafficLightService service = new TrafficLightServiceImpl();
         service.addNewTrafficLight(trafficLight);
 
         MainController controller = new MainController(service);
         MainViewImpl mainView = new MainViewImpl(controller);
 
-        // program and turnOn trafficLight number 1
+        // Программируем время светофора №1 и включаем его
         mainView.programTrafficLight(1);
         mainView.turnOnTrafficLight(1);
     }

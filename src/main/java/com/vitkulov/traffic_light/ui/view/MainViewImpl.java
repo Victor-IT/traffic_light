@@ -23,6 +23,10 @@ public class MainViewImpl implements MainView {
         this.controller = controller;
     }
 
+    /**
+     * Задаём время для светофора
+     * @param number    Номер светофора
+     */
     @Override
     public void programTrafficLight(int number) {
         System.out.println("Введите длительность работы цветов светофора (в секундах):");
@@ -38,10 +42,16 @@ public class MainViewImpl implements MainView {
 
     }
 
+
     public void turnOnTrafficLight(int number) {
         controller.turnOnTrafficLight(number);
     }
 
+    /**
+     * Приглашение на ввод строки (в нашем случае на ввод времени в секундах для цвета светофора)
+     * @param prompt    Строка запрос.
+     * @return
+     */
     private int inputInteger(String prompt) {
         while (true) {
             try {
