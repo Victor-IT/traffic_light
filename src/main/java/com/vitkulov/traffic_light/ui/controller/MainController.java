@@ -4,9 +4,6 @@ import com.vitkulov.traffic_light.model.entity.TrafficLight;
 import com.vitkulov.traffic_light.service.TrafficLightService;
 import com.vitkulov.traffic_light.ui.view.MainView;
 
-/**
- * Created by vitkulov on 10.03.2017.
- */
 public class MainController {
     private TrafficLightService service;
     private MainView mainView;
@@ -52,7 +49,7 @@ public class MainController {
     /**
      * Включает выбранный светофор
      *
-     * @param number    Номер светофора
+     * @param number Номер светофора
      */
     public void turnOnTrafficLight(int number) {
         TrafficLight trafficLight = service.getTrafficLight(number);

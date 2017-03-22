@@ -6,9 +6,6 @@ import com.vitkulov.traffic_light.service.TrafficLightServiceImpl;
 import com.vitkulov.traffic_light.ui.controller.MainController;
 import com.vitkulov.traffic_light.ui.view.MainViewImpl;
 
-/**
- * Created by vitkulov on 10.03.2017.
- */
 public class RunApp {
     public static void main(String[] args) {
 

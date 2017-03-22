@@ -6,9 +6,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/**
- * Created by vitkulov on 10.03.2017.
- */
 public class TrafficLightRepositoryImpl implements TrafficLightRepository {
 
     private List<TrafficLight> trafficLightList = new ArrayList<>();

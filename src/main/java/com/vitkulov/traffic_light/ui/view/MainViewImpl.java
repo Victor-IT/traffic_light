@@ -6,9 +6,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by vitkulov on 10.03.2017.
- */
 public class MainViewImpl implements MainView {
     private MainController controller;
     private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -25,7 +22,8 @@ public class MainViewImpl implements MainView {
 
     /**
      * Задаём время для светофора
-     * @param number    Номер светофора
+     *
+     * @param number Номер светофора
      */
     @Override
     public void programTrafficLight(int number) {
@@ -39,9 +37,7 @@ public class MainViewImpl implements MainView {
 
         int redTime = inputInteger("Красный: ");
         controller.setRedTime(number, redTime);
-
     }
-
 
     public void turnOnTrafficLight(int number) {
         controller.turnOnTrafficLight(number);
@@ -49,7 +45,8 @@ public class MainViewImpl implements MainView {
 
     /**
      * Приглашение на ввод строки (в нашем случае на ввод времени в секундах для цвета светофора)
-     * @param prompt    Строка запрос.
+     *
+     * @param prompt Строка запрос.
      * @return
      */
     private int inputInteger(String prompt) {

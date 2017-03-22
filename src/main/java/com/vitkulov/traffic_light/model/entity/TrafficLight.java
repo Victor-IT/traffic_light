@@ -1,11 +1,7 @@
 package com.vitkulov.traffic_light.model.entity;
 
-/**
- * Created by vitkulov on 10.03.2017.
- */
 public class TrafficLight {
     private int number;
-
     private int redTime;
     private int yellowTime;
     private int greenTime;
