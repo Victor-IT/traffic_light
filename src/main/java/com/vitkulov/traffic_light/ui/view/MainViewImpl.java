@@ -29,13 +29,13 @@ public class MainViewImpl implements MainView {
     public void programTrafficLight(int number) {
         System.out.println("Введите длительность работы цветов светофора (в секундах):");
 
-        int greenTime = inputInteger("Зеленый: ");
+        int greenTime = inputInteger("Зеленый");
         controller.setGreenTime(number, greenTime);
 
-        int yellowTime = inputInteger("Желтый: ");
+        int yellowTime = inputInteger("Желтый");
         controller.setYellowTime(number, yellowTime);
 
-        int redTime = inputInteger("Красный: ");
+        int redTime = inputInteger("Красный");
         controller.setRedTime(number, redTime);
     }
 
@@ -47,13 +47,14 @@ public class MainViewImpl implements MainView {
      * Приглашение на ввод строки (в нашем случае на ввод времени в секундах для цвета светофора)
      *
      * @param prompt Строка запрос.
-     * @return
+     * @return Возвращает преобразованное из строки число.
      */
     private int inputInteger(String prompt) {
         while (true) {
             try {
                 System.out.print(prompt + ": ");
-                return Integer.parseInt(reader.readLine());
+                String number = reader.readLine();
+                return Integer.parseInt(number);
             } catch (IOException e) {
                 throw new RuntimeException(e.getMessage());
             } catch (NumberFormatException e) {
